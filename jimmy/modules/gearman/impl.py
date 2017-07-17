@@ -26,7 +26,7 @@ class Gearman(BaseGroovyModule):
         try:
             subprocess.call(["java",
                              "-jar", jenkins_cli_path,
-                             "-s", jenkins_url,
+                             "-s", jenkins_url, "-remoting",
                              "groovy",
                              self.groovy_path,
                              str(data["enable"]),

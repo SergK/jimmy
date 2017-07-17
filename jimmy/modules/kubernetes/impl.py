@@ -32,7 +32,7 @@ class Kubernetes(BaseGroovyModule):
             try:
                 cli_call = subprocess.Popen(["java",
                                              "-jar", jenkins_cli_path,
-                                             "-s", jenkins_url,
+                                             "-s", jenkins_url, "-remoting",
                                              "groovy",
                                              '='
                                              ], stdin=subprocess.PIPE,

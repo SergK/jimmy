@@ -27,7 +27,7 @@ class Git(BaseGroovyModule):
             try:
                 subprocess.call(["java",
                                  "-jar", jenkins_cli_path,
-                                 "-s", jenkins_url,
+                                 "-s", jenkins_url, "-remoting",
                                  "groovy",
                                  self.groovy_path,
                                  "'{0}'".format(data["user"]["email"]),  # jenkins-cli bug workaround
